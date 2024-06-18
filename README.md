@@ -69,26 +69,10 @@ python port_scanner.py -host <target_host> -p <port(s)>
 
 ## 📊 Output
 
-When you run the tool, it displays a banner and starts scanning the specified ports on the target host, indicating whether each port is open or closed.
+![port-scanner-1](https://github.com/ketansonwane1/Port-Scanner/assets/141003493/f078e006-f9d6-4871-a76a-66ace3c885f2)
+![port-scanner-2](https://github.com/ketansonwane1/Port-Scanner/assets/141003493/2a75385b-250c-426f-9f94-fc7deb5b9703)
 
-```plaintext
-************************************************************************************************************************************************************
-                               $$$$$$$\                       $$\                                                                      
-                               $$  __$$\                      $$ |                                                                     
-                               $$ |  $$ | $$$$$$\   $$$$$$\ $$$$$$\          $$$$$$$\  $$$$$$$\ $$$$$$\  $$$$$$$\   $$$$$$\   $$$$$$\ 
-                               $$$$$$$  |$$  __$$\ $$  __$$\\_$$  _|        $$  _____|$$  _____|\____$$\ $$  __$$\ $$  __$$\ $$  __$$\ 
-                               $$  ____/ $$ /  $$ |$$ |  \__| $$ |          \$$$$$$\  $$ /      $$$$$$$ |$$ |  $$ |$$$$$$$$ |$$ |  \__|
-                               $$ |      $$ |  $$ |$$ |       $$ |$$\        \____$$\ $$ |     $$  __$$ |$$ |  $$ |$$   ____|$$ |       
-                               $$ |      \$$$$$$  |$$ |       \$$$$  |      $$$$$$$  |\$$$$$$$\\$$$$$$$ |$$ |  $$ |\$$$$$$$\ $$ |      
-                               \__|       \______/ \__|        \____/       \_______/  \_______|\_______|\__|  \__| \_______|\__|
-|--------------------------------------------------------------------Coded by Ketan------------------------------------------------------------------------|
-                                               
-                                                    Github: https://github.com/ketansonwane1                                                          
-************************************************************************************************************************************************************
-
-Ports scanning is started...
-```
-
+# 🔍 Port Scanner Tool
 ## 🤝 Contribution
 
 Contributions are welcome! If you find a bug or have a feature request, please open an issue or submit a pull request.
