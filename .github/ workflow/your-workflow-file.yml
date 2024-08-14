@@ -1,0 +1,24 @@
+name: CI/CD Pipeline
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Run tests and build
+        run: |
+          # Your build and test commands here
+          echo "Build and test commands go here"
+
+      - name: Send Slack notification
+        if: always()
+        run: |
+          curl -X POST -H 'Content-type: application/json' --data '{"text":"Build completed for repository *${{ github.repository }}*. Commit by *${{ github.actor }}*. View the details at: ${GITHUB_SERVER_URL}/${{ github.repository }}/commit/${{ github.sha }}"}' ${{ secrets.SLACK_WEBHOOK_URL }}
