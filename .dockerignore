@@ -1,0 +1,3 @@
+# Exclude the Dockerfile and .git directory
+Dockerfile
+.git
