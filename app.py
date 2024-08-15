@@ -1,11 +1,10 @@
-from flask import Flask, send_from_directory
+from flask import Flask
 
-app = Flask(__name__)
+app = Flask(__name__, static_folder='static')
 
-# Route for serving the static HTML file
 @app.route('/')
 def home():
-    return send_from_directory('.', 'index.html')
+    return app.send_static_file('index.html')
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=5000)
