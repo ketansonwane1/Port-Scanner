@@ -5,7 +5,7 @@ FROM python:3.8-slim
 WORKDIR /app
 
 # Copy the application code and requirements
-COPY index.py /app
+COPY index.html /app
 COPY requirements.txt /app
 
 # Install dependencies
@@ -15,4 +15,4 @@ RUN pip install --no-cache-dir -r requirements.txt
 EXPOSE 5000
 
 # Run the Flask application
-CMD ["python", "index.py"]
+CMD ["python", "index.html"]
