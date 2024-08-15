@@ -1,21 +1,21 @@
+# Use the official Python image from the Docker Hub
 FROM python:3.8-slim
 
-# Create a non-root user and switch to it
-RUN useradd -m myuser
-USER myuser
-
-# Set the working directory
+# Set the working directory inside the container
 WORKDIR /app
 
-# Copy the application code and requirements
-COPY --chown=myuser:myuser index.py /app
-COPY --chown=myuser:myuser requirements.txt /app
+# Copy the requirements file into the container
+COPY requirements.txt /app/
 
-# Install dependencies
+# Install Python dependencies
 RUN pip install --no-cache-dir -r requirements.txt
 
-# Expose port 5000
+# Copy the application code and HTML file into the container
+COPY app.py /app/
+COPY index.html /app/
+
+# Expose port 5000 to the outside world
 EXPOSE 5000
 
-# Run the Flask application
-CMD ["python", "index.py"]
+# Command to run the application
+CMD ["python", "app.py"]
